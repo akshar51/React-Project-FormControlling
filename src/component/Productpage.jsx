@@ -36,8 +36,6 @@ const ProductPage = () => {
   );
 };
 
-
-
   const handleDelete = (id) => {
     setCart(cart.filter(item => item.id !== id));
   };
