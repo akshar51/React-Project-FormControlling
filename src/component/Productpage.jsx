@@ -45,7 +45,7 @@ const ProductPage = () => {
 
   return (
     <div className="container mt-5">
-      <h2 className="text-center mb-4">Product Page</h2>
+      <h1 className="text-center mb-4">Product Page</h1>
       <div className="row">
         {products.map(product => (
           <div className="col-md-3 mb-4" key={product.id}>
