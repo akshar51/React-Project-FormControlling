@@ -9,7 +9,7 @@ const products = [
   { id: 5, name: "Xiaomi 13 Pro", price: 15999, img: "./public/image/xiomi-13.jpg" },
   { id: 6, name: "Realme GT", price: 24999, img: "./public/image/realme gt.jpg" },
   { id: 7, name: "Motorola Edge", price: 14599, img: "./public/image/one-10.jpg" },
-  { id: 8, name: "Nokia X20", price: 13999, img: "./public/image/one-10.jpg" },
+  { id: 8, name: "Nokia X20", price: 13999, img: "./public/image/x20.jpg" },
 ];
 
 const ProductPage = () => {
