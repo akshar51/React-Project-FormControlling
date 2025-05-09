@@ -17,11 +17,10 @@ const ProductPage = () => {
 
    const addToCart = (product) => {
     const existingItem = cart.find((item) => item.id === product.id);
-
+  
     if (existingItem) {
       const updatedCart = cart.map((item) =>
-        item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
-      );
+      item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item)
       setCart(updatedCart);
     } 
     else {
@@ -96,7 +95,7 @@ const ProductPage = () => {
                     ₹{item.price} × {item.quantity} = ₹{item.price * item.quantity}
                   </span>
                 </div>
-
+              {/* Decrease Quantity */}
             <div className="px-3 d-flex align-items-center gap-2">
               <button
               onClick={() => decreaseQuantity(item.id)}
@@ -105,11 +104,10 @@ const ProductPage = () => {
               <i className="bi bi-dash"></i>
               </button>
 
-      {/* Delete Button */}
+              {/* Delete Button */}
               <button
               onClick={() => handleDelete(item.id)}
-              className="btn btn-danger btn-sm"
-              >
+              className="btn btn-danger btn-sm">
               <i className="bi bi-trash"></i>
               </button>
             </div>
