@@ -29,10 +29,14 @@ const ProductPage = () => {
   };
 
   const decreaseQuantity = (id) => {
-  setCart((prevCart) =>
-    prevCart.map((item) => item.id === id ? { ...item, quantity: item.quantity - 1 } : item)
-            .filter((item) => item.quantity > 0)
-  );
+  const updatedCart = cart.map(item => {
+    if (item.id === id) {
+      return { ...item, quantity: item.quantity - 1 }
+    }
+    return item;
+  }).filter(item => item.quantity > 0)
+
+  setCart(updatedCart)
 };
 
   const handleDelete = (id) => {
