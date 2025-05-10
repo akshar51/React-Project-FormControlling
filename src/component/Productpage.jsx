@@ -35,7 +35,6 @@ const ProductPage = () => {
     }
     return item;
   }).filter(item => item.quantity > 0)
-
   setCart(updatedCart)
 };
 
