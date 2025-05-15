@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 
 const products = [
@@ -15,6 +15,11 @@ const products = [
 const ProductPage = () => {
   const [cart, setCart] = useState([]);
 
+  useEffect(() => {
+    setCart(JSON.parse(localStorage.getItem("cart"))) || []
+  }, []);
+  
+
    const addToCart = (product) => {
     const existingItem = cart.find((item) => item.id === product.id);
   
@@ -22,9 +27,12 @@ const ProductPage = () => {
       const updatedCart = cart.map((item) =>
       item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item)
       setCart(updatedCart);
+      localStorage.setItem("cart",JSON.stringify(updatedCart))
     } 
     else {
-      setCart([...cart, { ...product, quantity: 1 }]);
+      let newCart = [...cart, { ...product, quantity: 1 }]
+      setCart(newCart);
+      localStorage.setItem("cart",JSON.stringify(newCart))
     }
   };
 
@@ -36,10 +44,13 @@ const ProductPage = () => {
     return item;
   }).filter(item => item.quantity > 0)
   setCart(updatedCart)
+  localStorage.setItem("cart",JSON.stringify(updatedCart))
 };
 
   const handleDelete = (id) => {
-    setCart(cart.filter(item => item.id !== id));
+    let deleteCart = cart.filter(item => item.id !== id)
+    setCart(deleteCart);
+    localStorage.setItem("cart",JSON.stringify(deleteCart))
   };
 
   return (
