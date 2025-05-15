@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 
 
 const products = [
-  { id: 1, name: "iPhone 14", price: 59999, img: "./public/image/i-14.jpg" },
-  { id: 2, name: "Samsung Galaxy S22", price: 69999, img: "./public/image/s-22.jpg" },
-  { id: 3, name: "OnePlus 10", price: 35999, img: "./public/image/one-10.jpg" },
-  { id: 4, name: "Google Pixel 7", price: 79999, img: "./public/image/pixel-7.jpg" },
-  { id: 5, name: "Xiaomi 13 Pro", price: 15999, img: "./public/image/xiomi-13.jpg" },
-  { id: 6, name: "Realme GT", price: 24999, img: "./public/image/realme gt.jpg" },
-  { id: 7, name: "Motorola Edge", price: 14599, img: "./public/image/one-10.jpg" },
-  { id: 8, name: "Nokia X20", price: 13999, img: "./public/image/x20.jpg" },
+  { id: 1, name: "iPhone 14", price: 59999, img: "./src/assets/image/i-14.jpg" },
+  { id: 2, name: "Samsung Galaxy S22", price: 69999, img: "./src/assets/image/s-22.jpg" },
+  { id: 3, name: "OnePlus 10", price: 35999, img: "./src/assets/image/one-10.jpg" },
+  { id: 4, name: "Google Pixel 7", price: 79999, img: "./src/assets/image/pixel-7.jpg" },
+  { id: 5, name: "Xiaomi 13 Pro", price: 15999, img: "./src/assets/image/xiomi-13.jpg" },
+  { id: 6, name: "Realme GT", price: 24999, img: "./src/assets/image/realme gt.jpg" },
+  { id: 7, name: "Motorola Edge", price: 14599, img: "./src/assets/image/one-10.jpg" },
+  { id: 8, name: "Nokia X20", price: 13999, img: "./src/assets/image/x20.jpg" },
 ];
 
 const ProductPage = () => {
