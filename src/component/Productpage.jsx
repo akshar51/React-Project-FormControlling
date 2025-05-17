@@ -1,7 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 
-const products = [
+
+
+const ProductPage = () => {
+  const [cart, setCart] = useState([]);
+  const products = [
   { id: 1, name: "iPhone 14", price: 59999, img: "/image/i-14.jpg" },
   { id: 2, name: "Samsung Galaxy S22", price: 69999, img: "/image/s-22.jpg" },
   { id: 3, name: "OnePlus 10", price: 35999, img: "/image/one-10.jpg" },
@@ -11,10 +15,6 @@ const products = [
   { id: 7, name: "Motorola Edge", price: 14599, img: "/image/one-10.jpg" },
   { id: 8, name: "Nokia X20", price: 13999, img: "/image/x20.jpg" },
 ];
-
-const ProductPage = () => {
-  const [cart, setCart] = useState([]);
-  
 
   useEffect(() => {
     setCart(JSON.parse(localStorage.getItem("cart"))) || []
