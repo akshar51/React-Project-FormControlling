@@ -1,10 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
 
-
-
-
-const ProductPage = () => {
-  const [cart, setCart] = useState([]);
   const products = [
   { id: 1, name: "iPhone 14", price: 59999, img: "/image/iphone-14.jpg" },
   { id: 2, name: "Samsung Galaxy S22", price: 69999, img: "/image/Samsung Galaxy S22.jpg" },
@@ -15,6 +10,12 @@ const ProductPage = () => {
   { id: 7, name: "Motorola Edge", price: 14599, img: "/image/Motorola Edge.jpg" },
   { id: 8, name: "Nokia X20", price: 13999, img: "/image/Nokia X20.jpg" },
 ];
+
+
+
+const ProductPage = () => {
+  const [cart, setCart] = useState([]);
+
 
   useEffect(() => {
     setCart(JSON.parse(localStorage.getItem("cart"))) || []
